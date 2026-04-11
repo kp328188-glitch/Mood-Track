@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", serif;
+  
+  --color-primary: #3e665a;
+  --color-primary-container: #7fa99b;
+  --color-on-primary: #ffffff;
+  --color-secondary: #346570;
+  --color-secondary-container: #b9ebf8;
+  --color-on-secondary-container: #3b6b77;
+  --color-surface: #fcf9f0;
+  --color-surface-container-low: #f6f3ea;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1c1c17;
+  --color-on-surface-variant: #414845;
+  --color-outline: #717975;
+  --color-outline-variant: #c0c8c4;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.glass-nav {
+  background: rgba(252, 249, 240, 0.7);
+  backdrop-filter: blur(20px);
+}
+
+.paper-texture {
+  background-image: radial-gradient(#d1cfc7 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.2; transform: scale(1.05); }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
