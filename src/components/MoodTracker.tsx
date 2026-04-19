@@ -45,6 +45,9 @@ export default function MoodTracker() {
         time: new Date(),
       }),
     });
+    const response = await fetch("https://mood-track-c7ha.onrender.com/get-moods");
+    const data = await response.json();
+    setSelectedMood(data);
 
     console.log("Mood saved to backend");
   } catch (error) {
