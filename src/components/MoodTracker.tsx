@@ -35,7 +35,7 @@ export default function MoodTracker() {
 
   // ✅ Send mood to backend
   try {
-    await fetch("http://localhost:5000/save-mood", {
+    await fetch("https://mood-track-c7ha.onrender.com/save-mood", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
